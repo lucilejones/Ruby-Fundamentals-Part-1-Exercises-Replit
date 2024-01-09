@@ -16,8 +16,16 @@ end
 # The method should return a new array containing only the strings that are longer than the specified length. However, the current implementation is faulty and does not produce the correct result.
 
 def filter_long_strings(strings, length)
-
+  new_array = []
+  strings.each do |str|
+    if str.length > length
+      new_array.push(str)
+    end
+  end
+    return new_array
 end
+
+# p filter_long_strings(["yo", "blue", "tomato"], 2)
 
 # 2c. The script is intended to define a method find_max that takes an array of numbers and returns the largest number in the array. 
 # The current implementation, however, has one or more bugs.
