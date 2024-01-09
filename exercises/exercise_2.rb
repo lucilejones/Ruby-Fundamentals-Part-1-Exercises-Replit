@@ -31,5 +31,16 @@ end
 # The current implementation, however, has one or more bugs.
 
 def find_max(numbers)
-
+  max = -3/0.0
+  numbers.each do |num|
+    if num > max
+      max = num
+    else
+      max = max
+    end
+    # p max
+  end
+  return max
 end
+
+p find_max([2, -20, 15, 1000])
